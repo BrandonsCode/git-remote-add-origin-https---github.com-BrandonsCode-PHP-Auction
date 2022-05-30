@@ -37,6 +37,7 @@ echo "<a href='logout.php' class='logout button'>Logout </a>";
 	
 $statement = "SELECT * FROM item";
 $result = $conn->query($statement);
+echo $username;
 
 while($row = $result->fetch_assoc())
 {
@@ -51,6 +52,7 @@ $iimg = $iimg.$row["item_pic"];
  
 $link = "item_details.php?item_id=";
 $item_details = $link.$iid;
+
 echo "<div class='item'>";	
 echo "<div class='item_row'>Item Id: $iid</div>";
 echo "<div class='item_row'>Item Name: $iname</div>";
